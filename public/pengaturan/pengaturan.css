@@ -1,0 +1,71 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: grey;
+}
+
+.div-kembali {
+    display: flex;
+    justify-content: left;
+}
+
+.div-kembali .div-kembali1 {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.div-kembali a {
+    color: blue;
+    text-decoration: none;
+}
+
+.div-update {
+    display: flex;
+    justify-content: center;
+}
+
+.div-update h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.div-update fieldset {
+    margin-top: 50px;
+    width: 350px;
+}
+
+.div-update form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+}
+
+.div-update input {
+    padding: 10px;
+}
+
+.div-buttonupdate {
+    display: flex;
+    justify-content: center;
+}
+
+.div-update .button-update {
+    width: 100px;
+}
+
+.div-buttondelete {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.div-buttondelete .button-delete {
+    width: 350px;
+    padding: 10px;
+}

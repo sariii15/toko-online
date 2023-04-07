@@ -1,0 +1,60 @@
+body{
+  padding: 0;
+  margin: 0;
+  background:url(../image/home-slide5.jpg);
+  background-size: cover;
+  font-family: arial;
+}
+.container{
+  height: 320px;
+  width: 270px;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(0, 0, 0, 0.4);
+  position: absolute;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 20px;
+}
+ img{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left:calc(50% - 40px) ;
+ }
+ h1{
+  color: white;
+  padding-top: 35px ;
+  font-size: 20px;
+ }
+ #input{
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  padding: 11px;
+  margin: 15px;
+  outline: none;
+  color:white;
+ }
+#submit{
+  padding: 5%;
+  margin: 10px;
+  width: 200px;
+  border-radius: 20px ;
+  border: none;
+}
+#submit:hover{
+  color: white;
+  background-color:#886F6F ;
+}
+
+.div-register p {
+  color: white;
+}
+
+.div-register a {
+  text-decoration: none;
+  color: blue;
+}
