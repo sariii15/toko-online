@@ -58,8 +58,11 @@ export async function deleteAkun(req, res) {
 
 export async function postPembelian(req, res) {
   const user = jwt.verify(req.cookies.token, process.env.SECRET_KEY);
+  const a = req.body.harga;
+  const z = req.body.beliBerapa;
+  const total = a * z;
   await client.query(
-    `INSERT INTO pembelian (nama_pembeli, no_hp, email, harga, message, id) VALUES  ('${req.body.namaLengkap}', '${req.body.noHp}', '${req.body.email}', ${req.body.harga}, '${req.body.message}',  ${user.id})`
+    `INSERT INTO pembelian (nama_pembeli, no_hp, email, harga, message, id) VALUES  ('${req.body.namaLengkap}', '${req.body.noHp}', '${req.body.email}', ${total}, '${req.body.message}',  ${user.id})`
   );
   res.send("pembelian berhasil.");
 }

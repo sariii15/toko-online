@@ -17,7 +17,7 @@ app.post("/api/login", loginUser);
 app.put("/api/update", updateAkun);
 app.delete("/api/delete", deleteAkun);
 app.post("/api/tambahpembelian", postPembelian);
-app.get("/api/getpembayaran/:id", getPembayaran);
+app.get("/api/getpembayaran", getPembayaran);
 
 app.listen(3000, () => console.log("Server terhubung....."));
 

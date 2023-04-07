@@ -4,7 +4,7 @@ document.formPembelian.onsubmit = async (event) => {
   const noHp = document.formPembelian.noHp.value;
   const email = document.formPembelian.email.value;
   const harga = document.formPembelian.harga.value;
-  const message = document.formPembelian.message.value;
+  const beliBerapa = document.formPembelian.beliBerapa.value;
   await fetch("/api/tambahpembelian", {
     method: "POST",
     headers: {
@@ -15,7 +15,7 @@ document.formPembelian.onsubmit = async (event) => {
       noHp,
       email,
       harga,
-      message,
+      beliBerapa,
     }),
   }).then(async (response) => {
     if (response.ok) {

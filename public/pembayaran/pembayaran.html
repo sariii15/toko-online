@@ -8,17 +8,37 @@
     <link rel="stylesheet" href="pembayaran.css">
 </head>
 <body>
-    <form class="formPembayaran">
-        <h1>Payment</h1>
+    <button class="button-kembalipembayaran">
+        <a href="../beranda/beranda.html">Kembali</a>
+    </button>
+    <form name="formPembayaran">
+        <h1>Data Pembayaran</h1>
         <label>Nama lengkap</label><br>
-        <input type="text" name="namaLengkap" class="box" readonly><br>
+        <input type="text" name="namaLengkap" class="box"><br>
         <label>No Hp</label><br>
-        <input type="text" name="noHp" class="box" readonly><br>
+        <input type="text" name="noHp" class="box"><br>
         <label>Email</label><br>
-        <input type="text" name="email" class="box" readonly><br>
-        <label>Harga</label><br>
-        <input type="text" name="harga" class="box" readonly><br>
-        <button class="btn" type="button">Bayar</button>
+        <input type="text" name="email" class="box"><br>
+        <label>Total Bayar</label><br>
+        <input type="text" name="totalHarga" class="box"><br>
+        <label>Pilih pembayaran</label><br>
+        <div class="div-bank">
+            <div class="div-bankbca">
+                <a href="https://www.bca.co.id/" target="_blank">
+                    <img src="../image/logo-bca.png">
+                </a>
+            </div>
+            <div class="div-bankbri">
+                <a href="https://bri.co.id/" target="_blank">
+                    <img src="../image/logo-bri.png">
+                </a>
+            </div>
+            <div class="div-bankdana">
+                <a href="https://www.dana.id/" target="_blank">
+                    <img src="../image/logo-dana.png">
+                </a>
+            </div>
+        </div>
     </form>
     <script src="./pembayaran.js"></script>
 </body>
