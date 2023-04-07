@@ -62,7 +62,7 @@ export async function postPembelian(req, res) {
   const z = req.body.beliBerapa;
   const total = a * z;
   await client.query(
-    `INSERT INTO pembelian (nama_pembeli, no_hp, email, harga, message, id) VALUES  ('${req.body.namaLengkap}', '${req.body.noHp}', '${req.body.email}', ${total}, '${req.body.message}',  ${user.id})`
+    `INSERT INTO pembelian (nama_pembeli, no_hp, email, harga, id) VALUES  ('${req.body.namaLengkap}', '${req.body.noHp}', '${req.body.email}', ${total}, ${user.id})`
   );
   res.send("pembelian berhasil.");
 }
@@ -72,5 +72,13 @@ export async function getPembayaran(req, res) {
   const getPembayarann = await client.query(
     `SELECT nama_pembeli, no_hp, email, harga FROM pembelian WHERE id = ${user.id}` 
   );
-  res.send(getPembayarann.rows[0]);
+  res.send(getPembayarann.rows);
+}
+
+export async function historyData(req, res) {
+  const user = jwt.verify(req.cookies.token, process.env.SECRET_KEY);
+  const historyData = await client.query(
+    `SELECT nama_pembeli, no_hp, email, harga FROM pembelian WHERE id = ${user.id}`
+  );
+  res.send(historyData.rows);
 }

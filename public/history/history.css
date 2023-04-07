@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #e4d0d0;
+}
+
+.judul-history {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.table-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    margin-top: 100px;
+}
+
+.table-history th, td {
+    border: 1px solid;
+    padding: 10px;
+}
